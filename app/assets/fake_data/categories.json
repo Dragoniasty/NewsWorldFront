@@ -1,0 +1,23 @@
+{
+	"result": "000",
+	"message": "OK",
+	"value": {
+		"content": [
+			{
+				"id": 1,
+				"name": "sport",
+				"color": "#43A047"
+			},
+			{
+				"id": 2,
+				"name": "science",
+				"color": "#FB8C00"
+			},
+			{
+				"id": 3,
+				"name": "news",
+				"color": "#8E24AA"
+			}
+		]
+	}
+}

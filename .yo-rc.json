@@ -1,0 +1,35 @@
+{
+  "generator-angm": {
+    "appName": "news-world",
+    "angularCookies": true,
+    "angularAnimate": true,
+    "angularSanitize": true,
+    "angularBootstrap": false,
+    "angularMaterial": true,
+    "modules": [
+      {
+        "name": "singlepost"
+      },
+      {
+        "name": "categoryview"
+      },
+      {
+        "name": "content"
+      }
+    ],
+    "menu": [
+      {
+        "link": "singlepost",
+        "title": "Singlepost"
+      },
+      {
+        "link": "categoryview",
+        "title": "Categoryview"
+      },
+      {
+        "link": "content",
+        "title": "Content"
+      }
+    ]
+  }
+}

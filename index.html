@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt" ng-app="news-world">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<base href="/">
+	<title>news-world</title>
+	<meta name="description" content="Modular AngularJS with Angm-generator"/>
+	<meta name="author" content=""/>
+	<meta name="keywords" content=""/>
+	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=yes"/>
+	<link rel="shortcut icon" href="app/assets/images/favicon.ico"/>
+	<link rel="apple-touch-icon" href="app/assets/images/apple-touch-icon.png"/>
+	<link rel="apple-touch-icon" sizes="72x72" href="app/assets/images/apple-touch-icon-72x72.png"/>
+	<link rel="apple-touch-icon" sizes="114x114" href="app/assets/images/apple-touch-icon-114x114.png"/>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- injector:css -->
+	<link rel="stylesheet" href="/src/bower_components/angular-material-icons/angular-material-icons.css">
+	<link rel="stylesheet" href="/src/bower_components/angular-material/angular-material.css">
+	<!-- endinjector -->
+
+	<script src="/src/bower_components/es5-shim/es5-shim.js"></script>
+	<script src="/src/bower_components/json3/lib/json3.min.js"></script>
+	<script src="/src/bower_components/angular/angular.js"></script>
+	<script src="/src/bower_components/angular-resource/angular-resource.js"></script>
+	<script src="/src/bower_components/angular-aria/angular-aria.js"></script>
+	<script src="/src/bower_components/angular-mocks/angular-mocks.js"></script>
+	<script src="/src/bower_components/angular-cookies/angular-cookies.js"></script>
+	<script src="/src/bower_components/angular-animate/angular-animate.js"></script>
+	<script src="/src/bower_components/angular-sanitize/angular-sanitize.js"></script>
+	<script src="/src/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="/src/bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+	<script src="/src/bower_components/angular-messages/angular-messages.js"></script>
+	<script src="/src/bower_components/angular-material/angular-material.js"></script>
+	<script src="/app/app.js"></script>
+	<script src="/app/app.config.js"></script>
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+	<style>
+		.tile-image {
+			max-width: 100%;
+			max-height: 100%;
+		}
+	</style>
+</head>
+<body>
+
+<!--Beginning-->
+<md-content ng-controller="ContentCtrl as Content">
+	<div layout="column" ng-cloak>
+		<div ng-repeat="Category in Content.categories">
+
+			<md-toolbar style="background: {{Category.color}}">
+				<h1 style="padding-left: 80px;">{{Category.name}}</h1>
+			</md-toolbar>
+			<div layout="row" layout-no-wrap>
+				<dir-pagination-controls flex="5"
+										 template-url="/app/assets/templates/previous.tpl.html"
+										 pagination-id="Category.id"
+										 style="background: {{Category.color}};">
+				</dir-pagination-controls>
+				<div flex style="
+						background: {{Category.color}};
+						padding-bottom: 18px;
+						">
+					<md-grid-list
+						md-cols="5"
+						md-rows="2"
+						md-row-height="4:3"
+						md-gutter="12px">
+						<md-grid-tile
+									  dir-paginate="article in Category.articles | itemsPerPage: 10:Category.id"
+									  pagination-id="Category.id"
+									  md-colspan="1"
+									  md-rowspan="1">
+							<img ng-src="http://placehold.it/400x300" class="tile-image" alt="image">
+							<md-grid-tile-header>
+								<h3>{{article.title}}</h3>
+							</md-grid-tile-header>
+							<md-grid-tile-footer>
+								<div layout="row" layout-align="end">
+									<md-button>Jakieś</md-button>
+									<md-button>Akcje</md-button>
+								</div>
+							</md-grid-tile-footer>
+						</md-grid-tile>
+					</md-grid-list>
+
+				</div>
+				<dir-pagination-controls flex="5"
+										 template-url="/app/assets/templates/next.tpl.html"
+										 pagination-id="Category.id"
+										 style="background: {{Category.color}}">
+				</dir-pagination-controls>
+
+			</div>
+		</div>
+	</div>
+</md-content>
+<!--End-->
+
+<!-- injector:js -->
+<script src="/src/bower_components/es5-shim/es5-shim.js"></script>
+<script src="/src/bower_components/json3/lib/json3.min.js"></script>
+<script src="/src/bower_components/angular/angular.js"></script>
+<script src="/src/bower_components/angular-resource/angular-resource.js"></script>
+<script src="/src/bower_components/angular-aria/angular-aria.js"></script>
+<script src="/src/bower_components/angular-mocks/angular-mocks.js"></script>
+<script src="/src/bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="/src/bower_components/angular-animate/angular-animate.js"></script>
+<script src="/src/bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="/src/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="/src/bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+<script src="/src/bower_components/angular-messages/angular-messages.js"></script>
+<script src="/src/bower_components/angular-material/angular-material.js"></script>
+<script src="/src/bower_components/angularUtils-pagination/dirPagination.js"></script>
+<script src="/app/app.js"></script>
+<script src="/app/app.config.js"></script>
+<!-- endinjector -->
+
+
+</body>
+</html>

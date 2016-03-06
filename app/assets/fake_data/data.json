@@ -1,0 +1,269 @@
+{
+	"result": "000",
+	"message": "OK",
+	"value": {
+		"content": [
+			{
+				"id": 1,
+				"title": "Universam w gruzach. Nagranie z drona",
+				"text": "<img src=\"http://r-scale-03.dcs.redcdn.pl/scale/o2/tvn/web-content/m/p2/i/a2cc63e065705fe938a4dda49092966f/748bce01-354a-4651-bf11-e0b59f8ac445.jpg?type=1&amp;srcmode=4&amp;srcx=0/1&amp;srcy=0/1&amp;srcw=50&amp;srch=50&amp;dstw=50&amp;dsth=50&amp;quality=80\" align=\"right\" /> Po sentymentalnych pożegnaniach i akcjach aktywistów Universam już na dobre zaczął znikać z panoramy Grochowa.",
+				"imageUrl": null,
+				"link": "http://www.tvn24.pl/universam-w-gruzach-nagranie-z-drona,624847,s.html",
+				"visible": true,
+				"tags": [],
+				"category": null,
+				"addedDate": 1457224396561,
+				"source": null
+			},
+			{
+				"id": 2,
+				"title": "Jest śledztwo ws. wypadku auta prezydenta. \"Zabezpieczamy ślady\"",
+				"text": "<img src=\"http://r-scale-4b.dcs.redcdn.pl/scale/o2/tvn/web-content/m/p107/i/a2cc63e065705fe938a4dda49092966f/3ca49a99-7d33-4d2b-8e96-51da55b3340b.jpg?type=1&amp;srcmode=4&amp;srcx=0/1&amp;srcy=0/1&amp;srcw=50&amp;srch=50&amp;dstw=50&amp;dsth=50&amp;quality=80\" align=\"right\" /> Dotyczy ono nieumyślnego sprowadzenia niebezpieczeństwa katastrofy w ruchu lądowym.",
+				"imageUrl": null,
+				"link": "http://www.tvn24.pl/prokuratura-wszczela-sledztwo-ws-wypadku-prezydenta,624996,s.html",
+				"visible": true,
+				"tags": [],
+				"category": null,
+				"addedDate": 1457224396611,
+				"source": null
+			},
+			{
+				"id": 3,
+				"title": "Week in pictures",
+				"text": "A selection of the best news photographs from around the world taken over the past week.",
+				"imageUrl": null,
+				"link": "http://www.bbc.co.uk/news/in-pictures-35724268#sa-ns_mchannel=rss&ns_source=PublicRSS20-sa",
+				"visible": true,
+				"tags": [],
+				"category": null,
+				"addedDate": 1457224396621,
+				"source": null
+			},
+			{
+				"id": 4,
+				"title": "Yzik opuszcza poznańskie zoo. Przed nim przygoda",
+				"text": "<img src=\"http://r-scale-4f.dcs.redcdn.pl/scale/o2/tvn/web-content/m/p1/i/a2cc63e065705fe938a4dda49092966f/9611ef44-d383-4633-a01a-0b98f907ffc5.png?type=1&amp;srcmode=4&amp;srcx=0/1&amp;srcy=0/1&amp;srcw=50&amp;srch=50&amp;dstw=50&amp;dsth=50&amp;quality=80\" align=\"right\" /> Słoń osiągnął pełnię dojrzałości. Pora na znalezienie samicy.",
+				"imageUrl": null,
+				"link": "http://www.tvn24.pl/slon-yzik-wyrusza-do-wloch-szukac-partnerki,624941,s.html",
+				"visible": true,
+				"tags": [],
+				"category": null,
+				"addedDate": 1457224396635,
+				"source": null
+			},
+			{
+				"id": 5,
+				"title": "VIDEO: Burning skin and more... after 340 days in space",
+				"text": "Scott Kelly is back in the United States after spending 340 days in space, aboard the International Space Station.",
+				"imageUrl": null,
+				"link": "http://www.bbc.co.uk/news/science-environment-35734906#sa-ns_mchannel=rss&ns_source=PublicRSS20-sa",
+				"visible": true,
+				"tags": [],
+				"category": null,
+				"addedDate": 1457224396643,
+				"source": null
+			},
+			{
+				"id": 6,
+				"title": "Harvard scraps crest in slavery row",
+				"text": "Harvard Law School is to change its official seal, after protests that it included the emblem of a brutal slave owner.",
+				"imageUrl": null,
+				"link": "http://www.bbc.co.uk/news/education-35726878#sa-ns_mchannel=rss&ns_source=PublicRSS20-sa",
+				"visible": true,
+				"tags": [],
+				"category": null,
+				"addedDate": 1457224396658,
+				"source": null
+			},
+			{
+				"id": 7,
+				"title": "12-latek pomógł rannemu rowerzyście. \"Zachował zimną krew\"",
+				"text": "<img src=\"http://r-scale-37.dcs.redcdn.pl/scale/o2/tvn/web-content/m/p1/i/a2cc63e065705fe938a4dda49092966f/73b8597a-6895-4236-9754-98673cdd9f08.jpg?type=1&amp;srcmode=4&amp;srcx=0/1&amp;srcy=0/1&amp;srcw=50&amp;srch=50&amp;dstw=50&amp;dsth=50&amp;quality=80\" align=\"right\" /> Ma 12 lat i więcej odwagi niż niejeden dorosły. Marcel z Wicka pomógł rannemu rowerzyście, który leżał na ulicy. Mimo że mijali go kierowcy, żaden się nie zatrzymał. Władze gminy są dumne z postawy chłopca.",
+				"imageUrl": null,
+				"link": "http://www.tvn24.pl/wicko-12-latek-pomogl-rannemu-rowerzyscie,624901,s.html",
+				"visible": true,
+				"tags": [],
+				"category": null,
+				"addedDate": 1457224396664,
+				"source": null
+			},
+			{
+				"id": 8,
+				"title": "How much diesel pollution am I breathing in?",
+				"text": "People are increasingly being warned about the dangers of diesel pollution, but how much are we actually exposed to?",
+				"imageUrl": null,
+				"link": "http://www.bbc.co.uk/news/magazine-35717927#sa-ns_mchannel=rss&ns_source=PublicRSS20-sa",
+				"visible": true,
+				"tags": [],
+				"category": null,
+				"addedDate": 1457224396673,
+				"source": null
+			},
+			{
+				"id": 9,
+				"title": "Wchodz� do miejsc, z kt�rych inni uciekaj�. Czym zajmuj� eksploratorzy miejscy?",
+				"text": "<img src=\"http://i.wp.pl/a/f/jpeg/36395/250f.jpeg\" width=\"120\" align=\"left\"/>\"G��wna zasada eksploracji jest taka, by niczego nie niszczy�. Wchodzimy do miejsca, robimy zdj�cia i zostawiamy je tak jak wcze�niej wygl�da�o\". <a href=\"http://facet.wp.pl\">facet.wp.pl</a>",
+				"imageUrl": null,
+				"link": "http://facet.wp.pl/kat,1034499,wid,18197943,wiadomosc.html",
+				"visible": true,
+				"tags": [],
+				"category": null,
+				"addedDate": 1457224396683,
+				"source": null
+			},
+			{
+				"id": 10,
+				"title": "Były szef BOR: samochód ważący 3 tony nie powinien jechać w góry",
+				"text": "<img src=\"http://r-scale-1c.dcs.redcdn.pl/scale/o2/tvn/web-content/m/p1/i/a2cc63e065705fe938a4dda49092966f/73edef2e-f4e0-46bc-92ca-16b8dbe2663d.jpg?type=1&amp;srcmode=4&amp;srcx=0/1&amp;srcy=0/1&amp;srcw=50&amp;srch=50&amp;dstw=50&amp;dsth=50&amp;quality=80\" align=\"right\" /> - To co zrobił kierowca to majstersztyk.",
+				"imageUrl": null,
+				"link": "http://www.tvn24.pl/janicki-o-wypadku-prezydenta-dudy-na-a4,624968,s.html",
+				"visible": true,
+				"tags": [],
+				"category": null,
+				"addedDate": 1457224396689,
+				"source": null
+			},
+			{
+				"id": 11,
+				"title": "EU warnings from Johnson and Gove",
+				"text": "The UK's in-out referendum on the EU continues to feature heavily on the front pages, as Leave campaign heavyweights Boris Johnson and Michael Gove give interviews to the papers.",
+				"imageUrl": null,
+				"link": "http://www.bbc.co.uk/news/blogs-the-papers-35738356#sa-ns_mchannel=rss&ns_source=PublicRSS20-sa",
+				"visible": true,
+				"tags": [],
+				"category": null,
+				"addedDate": 1457224396696,
+				"source": null
+			},
+			{
+				"id": 12,
+				"title": "Wi�niewski: jak wychodzi�em spod prysznica to wygl�da�o jakby mnie po�wiartowali",
+				"text": "<img src=\"http://i.wp.pl/a/f/jpeg/36386/250w.jpeg\" width=\"120\" align=\"left\"/>- Jak wychodzi�em spod prysznica to wygl�da�o to jakby mnie po�wiartowali, albo mia�bym okres &#8211; m�wi. <a href=\"http://facet.wp.pl\">facet.wp.pl</a>",
+				"imageUrl": null,
+				"link": "http://facet.wp.pl/kat,1034499,wid,18193079,wiadomosc.html",
+				"visible": true,
+				"tags": [],
+				"category": null,
+				"addedDate": 1457224396711,
+				"source": null
+			},
+			{
+				"id": 13,
+				"title": "Cedric McMillan: nie lubi� umi�nionych dziewczyn",
+				"text": "<img src=\"http://i.wp.pl/a/f/jpeg/36388/cedric_250.jpeg\" width=\"120\" align=\"left\"/>Czy na kulturystyce da si� zarobi�, czy ka�dy mo�e wygl�da� tak jak on oraz dlaczego jego �ona tylko czeka, a� m�� w ko�cu si� roztyje - o tym wszystkim Cedric McMillan opowiedzia� w... <a href=\"http://facet.wp.pl\">facet.wp.pl</a>",
+				"imageUrl": null,
+				"link": "http://facet.wp.pl/kat,70994,wid,18194300,wiadomosc.html",
+				"visible": true,
+				"tags": [],
+				"category": null,
+				"addedDate": 1457224396718,
+				"source": null
+			},
+			{
+				"id": 14,
+				"title": "Hiszpania wciąż bez rządu. Dwa miesiące na negocjacje",
+				"text": "<img src=\"http://r-scale-ae.dcs.redcdn.pl/scale/o2/tvn/web-content/m/p1/i/a2cc63e065705fe938a4dda49092966f/0460505a-e253-45da-b06d-26b65fe11d50.jpg?type=1&amp;srcmode=4&amp;srcx=0/1&amp;srcy=0/1&amp;srcw=50&amp;srch=50&amp;dstw=50&amp;dsth=50&amp;quality=80\" align=\"right\" /> Przywódca hiszpańskich socjalistów (PSOE) Pedro Sanchez w piątek po raz drugi nie uzyskał wotum zaufania od deputowanych. Otwiera to drogę do nowej rundy rozmów koalicyjnych, której wynik może zakończyć trwający od grudnia impas po nierozstrzygającym wyniku wyborów.",
+				"imageUrl": null,
+				"link": "http://www.tvn24.pl/hiszpania-nowy-rzad-nie-otrzymal-wotum-zaufania,624826,s.html",
+				"visible": true,
+				"tags": [],
+				"category": null,
+				"addedDate": 1457224396725,
+				"source": null
+			},
+			{
+				"id": 15,
+				"title": "Gigantyczny korek na A4. \"Przez trzy godziny przejechałam cztery kilometry\"",
+				"text": "<img src=\"http://r-scale-ea.dcs.redcdn.pl/scale/o2/tvn/web-content/m/p1/i/a2cc63e065705fe938a4dda49092966f/80cc49b9-6193-4aef-82e6-7dfece1cf21c.jpg?type=1&amp;srcmode=4&amp;srcx=0/1&amp;srcy=0/1&amp;srcw=50&amp;srch=50&amp;dstw=50&amp;dsth=50&amp;quality=80\" align=\"right\" /> Korek na autostradzie miał ok. 15 km długości.",
+				"imageUrl": null,
+				"link": "http://www.tvn24.pl/gigantyczny-korek-na-a4-trwaja-ogledziny-miejsca-wypadku-prezydenta,624981,s.html",
+				"visible": true,
+				"tags": [],
+				"category": null,
+				"addedDate": 1457224396731,
+				"source": null
+			},
+			{
+				"id": 16,
+				"title": "Stars complete 57-hour five-a-side game",
+				"text": "Alan Shearer's team have beaten Robbie Savage's squad in a 57-hour five-a-side game for Sport Relief that saw over 1,100 people play alongside the pundits.",
+				"imageUrl": null,
+				"link": "http://www.bbc.co.uk/news/uk-england-manchester-35735564#sa-ns_mchannel=rss&ns_source=PublicRSS20-sa",
+				"visible": true,
+				"tags": [],
+				"category": null,
+				"addedDate": 1457224396741,
+				"source": null
+			},
+			{
+				"id": 17,
+				"title": "Niemiecka prasa: Włochy i Niemcy chcą nowego systemu azylowego UE",
+				"text": "<img src=\"http://r-scale-17.dcs.redcdn.pl/scale/o2/tvn/web-content/m/p1/i/a2cc63e065705fe938a4dda49092966f/47373a42-9d55-4e7b-9b1f-6ecd800a0e2a.jpg?type=1&amp;srcmode=4&amp;srcx=0/1&amp;srcy=0/1&amp;srcw=50&amp;srch=50&amp;dstw=50&amp;dsth=50&amp;quality=80\" align=\"right\" /> Niemcy i Włochy skierowały do KE list zawierający propozycje dot. nowej unijnej polityki wobec uchodźców.",
+				"imageUrl": null,
+				"link": "http://www.tvn24.pl/wlochy-i-niemcy-za-nowa-polityka-wobec-uchodzcow,624971,s.html",
+				"visible": true,
+				"tags": [],
+				"category": null,
+				"addedDate": 1457224396749,
+				"source": null
+			},
+			{
+				"id": 18,
+				"title": "Mamy szczyt zachorowań na grypę. W ciągu pół roku zmarło kilkadziesiąt osób",
+				"text": "<img src=\"http://r-scale-e1.dcs.redcdn.pl/scale/o2/tvn/web-content/m/p5/i/77f959f119f4fb2321e9ce801e2f5163/13890632-964a-11e4-b03f-0025b511229e.jpg?type=1&amp;srcmode=4&amp;srcx=0/1&amp;srcy=0/1&amp;srcw=50&amp;srch=50&amp;dstw=50&amp;dsth=50&amp;quality=80\" align=\"right\" /> Rady? Szczepmy się, przestrzegajmy zasad higieny, unikajmy skupisk ludzi.",
+				"imageUrl": null,
+				"link": "http://www.tvn24.pl/mamy-szczyt-zachorowan-na-grype-w-ciagu-pol-roku-zmarlo-kilkadziesiat-osob,624972,s.html",
+				"visible": true,
+				"tags": [],
+				"category": null,
+				"addedDate": 1457224396756,
+				"source": null
+			},
+			{
+				"id": 19,
+				"title": "Heads warn on child mental health care",
+				"text": "More young people are suffering mental health problems but care outside schools is failing to keep pace, say head teachers",
+				"imageUrl": null,
+				"link": "http://www.bbc.co.uk/news/education-35730625#sa-ns_mchannel=rss&ns_source=PublicRSS20-sa",
+				"visible": true,
+				"tags": [],
+				"category": null,
+				"addedDate": 1457224396772,
+				"source": null
+			},
+			{
+				"id": 20,
+				"title": "Blanchflower: Rates will go down not up",
+				"text": "A former Monetary Policy Committee member says he expects interest rates to fall further in Britain and to remain at near record low levels until 2021.",
+				"imageUrl": null,
+				"link": "http://www.bbc.co.uk/news/business-35731957#sa-ns_mchannel=rss&ns_source=PublicRSS20-sa",
+				"visible": true,
+				"tags": [],
+				"category": null,
+				"addedDate": 1457224396778,
+				"source": null
+			}
+		],
+		"last": false,
+		"totalElements": 118,
+		"totalPages": 6,
+		"sort": null,
+		"first": true,
+		"numberOfElements": 20,
+		"size": 20,
+		"number": 0
+	}
+}
+
+
+<div layout="row">
+<dir-pagination-controls
+template-url="/app/assets/templates/previous.tpl.html"
+pagination-id="Category.id">
+</dir-pagination-controls>
+
+</div>
+<dir-pagination-controls
+template-url="/app/assets/templates/next.tpl.html"
+pagination-id="Category.id">
+</dir-pagination-controls>
