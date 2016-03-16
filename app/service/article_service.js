@@ -5,13 +5,14 @@ App.factory('ArticleService', ['$http', '$q', function($http, $q){
 	return {
 
 			fetchAllArticles: function() {
-					return $http.get('http://localhost:46969/api/article')
+					return $http.get('http://37.187.52.160:9000/api/article')
 							.then(
 									function(response){
 										return response.data;
 									},
 									function(errResponse){
 										console.error('Error while fetching articles');
+										console.errro(errResponse);
 										return $q.reject(errResponse);
 									}
 							);

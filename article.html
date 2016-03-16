@@ -44,11 +44,33 @@
 			max-width: 100%;
 			max-height: 100%;
 		}
-	</style>
+
+      .username.ng-valid {
+          background-color: lightgreen;
+      }
+      .username.ng-dirty.ng-invalid-required {
+          background-color: red;
+      }
+      .username.ng-dirty.ng-invalid-minlength {
+          background-color: yellow;
+      }
+
+      .email.ng-valid {
+          background-color: lightgreen;
+      }
+      .email.ng-dirty.ng-invalid-required {
+          background-color: red;
+      }
+      .email.ng-dirty.ng-invalid-email {
+          background-color: yellow;
+      }
+
+    </style>
 </head>
 <body class="ng-cloak">
 
 <!--Beginning-->
+
 <div class="container generic-container" ng-controller="ArticleController as ctrl">
          <div class="panel panel-default">
 
@@ -93,8 +115,8 @@
                          </div>
                      </div>
 
-                     <div class="row">
-                         <div class="form-actions floatRight">
+                     <div class="">
+                         <div class="">
                              <input type="submit"  value="{{!ctrl.article.id ? 'Add' : 'Update'}}" class="btn btn-primary">
 
                          </div>
