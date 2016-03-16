@@ -10,7 +10,7 @@
 	 * Main modules of the application.
 	 */
 
-	angular
+	var App = angular
 		.module('news-world', [
 			'ngResource',
 			'ngAria',
@@ -23,7 +23,6 @@
 			'angularUtils.directives.dirPagination'])
 		.controller('ContentCtrl', Content)
 		.factory('ContentService', ContentService);
-
 
 	ContentService.$inject = ['$http'];
 	Content.$inject = ['ContentService'];
@@ -48,6 +47,7 @@
 			$scope.error = 'unable to fetch categories';
 		});
 	}
+
 
 	function ContentService($http){
 		return {
