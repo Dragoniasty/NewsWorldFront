@@ -5,7 +5,8 @@ App.factory('ArticleService', ['$http', '$q', function($http, $q){
 	return {
 
 			fetchAllArticles: function() {
-					return $http.get('http://37.187.52.160:9000/api/article')
+					//return $http.get('http://37.187.52.160:9000/api/article')
+					return $http.get('/app/assets/fake_data/news.json')
 							.then(
 									function(response){
 										return response.data;

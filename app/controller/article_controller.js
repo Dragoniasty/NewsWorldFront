@@ -11,7 +11,8 @@ App.controller('ArticleController', ['$scope', 'ArticleService', function($scope
               ArticleService.fetchAllArticles()
                   .then(
       					       function(d) {
-      						        self.articles = d;
+      						        self.articles = d.value.content;
+
       					       },
             					function(errResponse){
             						console.error('Error while fetching Currencies');
