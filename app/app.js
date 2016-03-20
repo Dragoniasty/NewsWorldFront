@@ -13,7 +13,7 @@
 	angular.module('news-world', [
 		'ngResource',
 		'ngAria',
-		 'ngMaterial',
+		'ngMaterial',
 		'ngMdIcons',
 		'ngCookies',
 		'ngAnimate',
