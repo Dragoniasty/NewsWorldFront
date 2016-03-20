@@ -1,0 +1,29 @@
+{
+	"name": "angular-swiper-repeat",
+	"version": "0.1.2",
+	"authors": [
+		"ibtkvi <ibtkvi@gmail.com>"
+	],
+	"description": "Swiper for AngularJS",
+	"main": "swiperRepeat.js",
+	"keywords": [
+		"angular",
+		"swiper"
+	],
+	"dependencies": {
+		"angular": "^1.2.1"
+	},
+	"license": "MIT",
+	"ignore": [],
+	"homepage": "https://github.com/ibtkvi/angular-swiper-repeat",
+	"_release": "0.1.2",
+	"_resolution": {
+		"type": "version",
+		"tag": "v0.1.2",
+		"commit": "cc7f11fdaf7955c629bcb29813292af341ad9c7c"
+	},
+	"_source": "git://github.com/ibtkvi/angular-swiper-repeat.git",
+	"_target": "^0.1.2",
+	"_originalSource": "angular-swiper-repeat",
+	"_direct": true
+}
