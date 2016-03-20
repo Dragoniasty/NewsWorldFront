@@ -32,10 +32,14 @@
 			vm.POSTResponse = {};
 			vm.ArticleToPost.tagIds = [];
 
+			vm.tags = [];
+			vm.articles = [];
+			vm.categories = [];
 			vm.postArticle = function(){
 				vm.tmpTags.forEach(function(tag){
 					if(vm.tags.indexOf(tag.name) === -1){
-						vm.postTag(tag).then(function(data){
+						console.log(tag);
+						ArticleService.postTag(tag).then(function (data) {
 							vm.ArticleToPost.tagIds.push(data.data.value.id);
 							vm.tags.push(data.data.value);
 						});
