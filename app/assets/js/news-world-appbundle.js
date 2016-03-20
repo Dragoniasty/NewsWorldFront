@@ -23,29 +23,57 @@
 			'ngCookies',
 			'ngAnimate',
 			'ngSanitize',
-			'ui.router',])
-		.controller('CategoryCtrl', Category)
-		.factory('CategoryService', CategoryService);
+			'ui.router',
+			'angularUtils.directives.dirPagination'])
+		.controller('ContentCtrl', Content)
+		.factory('ContentService', ContentService);
 
-	CategoryService.$inject = ['$http'];
 
-	function Category(CategoryService){
+	ContentService.$inject = ['$http'];
+	Content.$inject = ['ContentService'];
+
+	function Content(ContentService){
 		var vm = this;
-		vm.articles = CategoryService.getArticles();
+
+		ContentService.getCategories().then(function(data) {
+			vm.categories = data;
+
+			vm.categories.forEach(function(category){
+				category.id = "$".concat(category.id);
+				console.log(category);
+				ContentService.getArticles(category.name).then(function(data){
+					category.articles = data;
+				}, function() {
+					$scope.error = 'unable to fetch articles';
+				});
+			});
+
+		}, function() {
+			$scope.error = 'unable to fetch categories';
+		});
 	}
 
-	function CategoryService($http){
+	function ContentService($http){
 		return {
+			getCategories: getCategories,
 			getArticles: getArticles
 		};
 
-		function getArticles() {
-			$http.get("http://37.187.52.160:9000/api/article").success(function(response){
-				return response.value
+		function getCategories(){
+			return $http.get('/app/assets/fake_data/categories.json').then(function(response) {
+				return response.data.value.content;
+			});
+		}
+
+		function getArticles(category) {
+			var link = "/app/assets/fake_data/";
+			link = link.concat(category);
+			link = link.concat(".json");
+			return $http.get('http://37.187.52.160:9000/api/article?pageSize=20').then(function(response) {
+				return response.data.value.content;
 			});
 		}
 	}
-
 })();
 
 (function () {
@@ -74,10 +102,10 @@
 		// This is required for Browser Sync to work poperly
 		$httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
-		
+
 		$urlRouterProvider
 			.otherwise('/dashboard');
-		
+
 	}
 
 	runBlock.$inject = ['$rootScope'];

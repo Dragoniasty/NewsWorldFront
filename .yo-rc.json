@@ -15,6 +15,12 @@
       },
       {
         "name": "content"
+      },
+      {
+        "name": "login"
+      },
+      {
+        "name": "article"
       }
     ],
     "menu": [
@@ -29,6 +35,14 @@
       {
         "link": "content",
         "title": "Content"
+      },
+      {
+        "link": "login",
+        "title": "Login"
+      },
+      {
+        "link": "article",
+        "title": "Article"
       }
     ]
   }

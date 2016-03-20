@@ -165,8 +165,8 @@ module.exports = function (grunt) {
 		"concat",
 		"ngtemplates",
 		"injector:production",
-		"concurrent",
-		"clean"
+		"concurrent"
+		//"clean"
 	]);
 
 	// Development task(s).

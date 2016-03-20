@@ -1,0 +1,67 @@
+
+<div layout="row" ng-controller="ContentCtrl as Content">
+
+	<md-content style="width: 100%">
+		<md-button ng-click="Content.openLeftMenu()" style="position: fixed; z-index: 3;">Sidenav</md-button>
+		<div layout="column" ng-cloak>
+			<div ng-repeat="Category in Content.categories">
+
+				<md-toolbar style="background: {{Category.color}}" layout="row">
+					<div flex="5"></div>
+					<h1>{{Category.name}}</h1>
+				</md-toolbar>
+				<div layout="row" layout-no-wrap>
+					<dir-pagination-controls flex="5"
+											 template-url="/app/assets/templates/previous.tpl.html"
+											 pagination-id="Category.id"
+											 style="background: {{Category.color}}; display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 18px">
+					</dir-pagination-controls>
+					<div flex style="
+						background: {{Category.color}};
+						padding-bottom: 18px;
+						">
+						<md-grid-list
+							md-cols="5"
+							md-rows="2"
+							md-row-height="4:3"
+							md-gutter="16px">
+							<md-grid-tile
+								dir-paginate="article in Category.articles | itemsPerPage: 10:Category.id"
+								pagination-id="Category.id"
+								md-colspan="1"
+								md-rowspan="1"
+								class="padded" md-whiteframe="2">
+								<img ng-src="http://placehold.it/400x300" class="tile-image" alt="image">
+								<md-grid-tile-header>
+									<h3>{{article.title}}</h3>
+								</md-grid-tile-header>
+								<md-grid-tile-footer>
+									<div layout="row">
+										<md-button ng-href="{{article.link}}" target="_blank">Jakieś</md-button>
+
+										<md-button>Akcje</md-button>
+									</div>
+								</md-grid-tile-footer>
+							</md-grid-tile>
+						</md-grid-list>
+
+
+
+					</div>
+					<dir-pagination-controls flex="5"
+											 template-url="/app/assets/templates/next.tpl.html"
+											 pagination-id="Category.id"
+											 style="background: {{Category.color}}; display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 18px">
+					</dir-pagination-controls>
+
+				</div>
+			</div>
+		</div>
+	</md-content>
+</div>

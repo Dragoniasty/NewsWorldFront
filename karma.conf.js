@@ -25,7 +25,21 @@ module.exports = function (config) {
 			'src/bower_components/angular-messages/angular-messages.js',
 			'src/bower_components/angular-material-icons/angular-material-icons.js',
 			'app/app.js',
-
+			'app/modules/content/contentModule.js',
+			'app/modules/content/contentCtrl.js',
+			'app/modules/content/contentRoute.js',
+			'app/modules/content/contentService.js',
+			'app/modules/content/content-test.js',
+			'app/modules/login/loginModule.js',
+			'app/modules/login/loginCtrl.js',
+			'app/modules/login/loginRoute.js',
+			'app/modules/login/loginService.js',
+			'app/modules/login/login-test.js',
+			'app/modules/article/articleModule.js',
+			'app/modules/article/articleCtrl.js',
+			'app/modules/article/articleRoute.js',
+			'app/modules/article/articleService.js',
+			'app/modules/article/article-test.js',
 		],
 
 		// Test results reporter to use
