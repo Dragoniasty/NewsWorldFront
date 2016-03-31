@@ -25,7 +25,8 @@
 				getTags: getTags,
 				postArticle: postArticle,
 				postCategory: postCategory,
-				postTag: postTag
+				postTag: postTag,
+				putCategory: putCategory
 			};
 
 			function getCategories(){
@@ -65,6 +66,13 @@
 
 			function postTag(tag){
 				return $http.post('http://37.187.52.160:9000/api/tag', $httpParamSerializerJQLike(tag)).then(function(response) {
+					console.log(response);
+					return response;
+				});
+			}
+
+			function putCategory(category) {
+				return $http.put('http://37.187.52.160:9000/api/category', $httpParamSerializerJQLike(category)).then(function (response) {
 					console.log(response);
 					return response;
 				});

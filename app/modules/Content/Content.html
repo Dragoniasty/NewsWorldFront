@@ -1,67 +1,87 @@
-
-<div layout="row" ng-controller="ContentCtrl as Content">
-
-	<md-content style="width: 100%">
-		<md-button ng-click="Content.openLeftMenu()" style="position: fixed; z-index: 3;">Sidenav</md-button>
-		<div layout="column" ng-cloak>
-			<div ng-repeat="Category in Content.categories">
-
-				<md-toolbar style="background: {{Category.color}}" layout="row">
-					<div flex="5"></div>
-					<h1>{{Category.name}}</h1>
-				</md-toolbar>
-				<div layout="row" layout-no-wrap>
-					<dir-pagination-controls flex="5"
-											 template-url="/app/assets/templates/previous.tpl.html"
-											 pagination-id="Category.id"
-											 style="background: {{Category.color}}; display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 18px">
-					</dir-pagination-controls>
-					<div flex style="
-						background: {{Category.color}};
-						padding-bottom: 18px;
-						">
-						<md-grid-list
-							md-cols="5"
-							md-rows="2"
-							md-row-height="4:3"
-							md-gutter="16px">
-							<md-grid-tile
-								dir-paginate="article in Category.articles | itemsPerPage: 10:Category.id"
-								pagination-id="Category.id"
-								md-colspan="1"
-								md-rowspan="1"
-								class="padded" md-whiteframe="2">
-								<img ng-src="http://placehold.it/400x300" class="tile-image" alt="image">
-								<md-grid-tile-header>
-									<h3>{{article.title}}</h3>
-								</md-grid-tile-header>
-								<md-grid-tile-footer>
-									<div layout="row">
-										<md-button ng-href="{{article.link}}" target="_blank">Jakieś</md-button>
-
-										<md-button>Akcje</md-button>
-									</div>
-								</md-grid-tile-footer>
-							</md-grid-tile>
-						</md-grid-list>
-
-
-
-					</div>
-					<dir-pagination-controls flex="5"
-											 template-url="/app/assets/templates/next.tpl.html"
-											 pagination-id="Category.id"
-											 style="background: {{Category.color}}; display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 18px">
-					</dir-pagination-controls>
-
-				</div>
-			</div>
+<div layout="row" flex style="background-color: black; width: 100%">
+	<div class="overlay"></div>
+	<md-sidenav md-component-id="left" class="md-sidenav-left" style="position: fixed" md-disable-backdrop
+				md-is-locked-open="$mdMedia('min-width: 333px')">
+		<div layout="column" style="align-items: flex-start; height: 100%">
+			<md-list style="align-self: flex-start; width: 100%; padding-top: 100px;">
+				<md-list-item ng-repeat="Category in Content.categories">
+					<a href="#{{Category.name}}" class="category-selector" du-smooth-scroll du-scrollspy>{{Category.name}}</a>
+				</md-list-item>
+			</md-list>
 		</div>
-	</md-content>
+	</md-sidenav>
+	<div layout="column" ng-cloak style="overflow: hidden; width: 100%; position: relative">
+
+		<div height-extractor ng-repeat="Category in Content.categories" style="height: 100%; position: relative">
+			<section id="{{Category.name}}">
+				<img class="background-image" ng-src="http://lorempixel.com/1000/600/" du-parallax
+					 y="Content.background"
+					 custom="Content.fadeIn" alt="" style="height: {{height}}">
+				<md-toolbar style="background: transparent; padding-left: 200px" layout="row">
+					<div class="category-heading">{{Category.name}}</div>
+				</md-toolbar>
+				<div style="width: 100%; padding-left: 200px; padding-right: 200px; padding-bottom: 40px" flex>
+					<md-grid-list md-cols="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="4" md-row-height="2:2"
+								  md-gutter="30px" style="width: 100%; ">
+						<md-grid-tile ng-repeat="article in Category.articles | limitTo: 20">
+							<article article="article" style="height: 100%; width: 100%"></article>
+						</md-grid-tile>
+					</md-grid-list>
+				</div>
+			</section>
+		</div>
+
+	</div>
 </div>
+
+<style>
+	.md-sidenav-left {
+		position: fixed;
+		height: 100%;
+		width: 200px;
+		background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.74) 0%, rgba(0, 0, 0, 0) 99%, rgba(0, 0, 0, 0) 100%);
+		background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.74) 0%, rgba(0, 0, 0, 0) 99%, rgba(0, 0, 0, 0) 100%);
+		background: linear-gradient(to right, rgba(0, 0, 0, 0.74) 0%, rgba(0, 0, 0, 0) 99%, rgba(0, 0, 0, 0) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bd000000', endColorstr='#00000000', GradientType=1);
+	}
+
+	.background-image {
+		position: absolute;
+		-webkit-transform: translate3d(0, 0, 0);
+	}
+
+	.category-selector {
+		font-size: 26px;
+		color: white;
+		opacity: 0.8;
+		text-decoration: none;
+		webkit-transition: font-size 0.25s, opacity 0.25s;
+		transition: font-size 0.25s, opacity 0.25s;
+	}
+
+	.category-selector.active {
+		font-size: 38px;
+		color: white;
+		opacity: 0.9;
+		text-decoration: none;
+	}
+
+	.category-heading {
+		font-size: 3em;
+		color: white;
+		opacity: 0.9;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0.73;
+		z-index: 1;
+	}
+</style>

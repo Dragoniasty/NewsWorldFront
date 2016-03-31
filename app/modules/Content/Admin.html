@@ -57,6 +57,16 @@
 		</md-tab>
 
 		<md-tab label="POST category" style="height: 100%">
+			<md-list-item ng-click="articleCtrl.setCategoryToPost({})" style="background: #AED581">
+				<p>Dodaj nową kategorię</p>
+			</md-list-item>
+			<md-list>
+				<md-list-item ng-repeat="category in articleCtrl.categories"
+							  ng-click="articleCtrl.setCategoryToPost(category)">
+					<p>{{category.name}}</p>
+				</md-list-item>
+
+			</md-list>
 			<md-content class="md-padding">
 				<form ng-submit="articleCtrl.postCategory(articleCtrl.CategoryToPost)">
 					<md-input-container class="md-block">

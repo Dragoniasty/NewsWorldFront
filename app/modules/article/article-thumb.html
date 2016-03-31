@@ -1,0 +1,61 @@
+<div class="tile md-whiteframe-5dp" ng-click="" md-ink-ripple>
+	<img class="miniature"
+		 ng-src="http://ocdn.eu/images/pulscms/Yjc7MDQsMSw0OCw5YjgsNTc3OzA2LDMxNCwxYmM7MGMsMTQwYjFjZmU3ZjBhYzUyZWRjMDEwZDcwOTc4ZTg0YmUsMSwxLDYsMA__/bd9164c92014b1f1618d664663fa9c00.jpg">
+	<div class="gradient"></div>
+	<div class="title">{{vm.article.title}}</div>
+</div>
+
+<style>
+
+	.tile {
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+		display: block;
+		position: absolute;
+		z-index: 3;
+		background-color: black;
+	}
+
+	.miniature {
+		position: absolute;
+		left: -1000%;
+		right: -1000%;
+		top: -1000%;
+		bottom: -1000%;
+		margin: auto;
+		height: 100%;
+		min-width: 100%;
+		opacity: 1;
+		z-index: -1;
+		webkit-transition: width 0.7s, height 0.7s, opacity 0.7s;
+		transition: width 0.7s, height 0.7s, opacity 0.7s;
+	}
+
+	.miniature:hover {
+		height: 107%;
+		opacity: 0.45;
+	}
+
+	.gradient {
+		pointer-events: none;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 26%, rgba(0, 0, 0, 0.65) 100%);
+		background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 26%, rgba(0, 0, 0, 0.65) 100%);
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 26%, rgba(0, 0, 0, 0.65) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+
+	}
+
+	.title {
+		pointer-events: none;
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		font-size: 25px;
+		color: white;
+		padding: 10px;
+	}
+</style>

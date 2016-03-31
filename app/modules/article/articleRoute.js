@@ -10,14 +10,14 @@
 
 angular.module('article')
 	.config(['$stateProvider', function ($stateProvider) {
-		
+
 		$stateProvider
 			.state('home.article', {
-				url:'/article',
-				templateUrl: 'app/modules/article/article.html',
+				url: '/',
+				templateUrl: 'app/modules/article/article-thumb.html',
 				controller: 'ArticleCtrl',
 				controllerAs: 'vm'
 			});
 
-		
+
 	}]);

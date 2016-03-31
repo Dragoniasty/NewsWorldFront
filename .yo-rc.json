@@ -15,6 +15,9 @@
       },
       {
         "name": "article"
+	  },
+		{
+			"name": "admin"
       }
     ],
     "menu": [
@@ -29,6 +32,10 @@
       {
         "link": "article",
         "title": "Article"
+	  },
+		{
+			"link": "admin",
+			"title": "Admin"
       }
     ]
   }

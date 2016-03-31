@@ -23,7 +23,6 @@
     "commit": "cc7f11fdaf7955c629bcb29813292af341ad9c7c"
   },
   "_source": "git://github.com/ibtkvi/angular-swiper-repeat.git",
-  "_target": "^0.1.2",
-  "_originalSource": "angular-swiper-repeat",
-  "_direct": true
+	"_target": ">=0.1.2",
+	"_originalSource": "angular-swiper-repeat"
 }

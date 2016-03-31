@@ -9,6 +9,7 @@
 	 * Module of the app
 	 */
 
-  	angular.module('article', []);
-
+	angular
+		.module('article', [])
+		
 })();

@@ -22,6 +22,9 @@
 		'content',
 		'login',
 		'article',
+		'admin',
+		'duParallax',
+		'duScroll'
 	]);
 
 })();

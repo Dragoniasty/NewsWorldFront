@@ -25,6 +25,11 @@ module.exports = function (config) {
 			'src/bower_components/angular-messages/angular-messages.js',
 			'src/bower_components/angular-material-icons/angular-material-icons.js',
 			'app/app.js',
+			'app/modules/home/homeModule.js',
+			'app/modules/home/homeCtrl.js',
+			'app/modules/home/homeRoute.js',
+			'app/modules/home/homeService.js',
+			'app/modules/home/home-test.js',
 			'app/modules/content/contentModule.js',
 			'app/modules/content/contentCtrl.js',
 			'app/modules/content/contentRoute.js',
@@ -40,6 +45,11 @@ module.exports = function (config) {
 			'app/modules/article/articleRoute.js',
 			'app/modules/article/articleService.js',
 			'app/modules/article/article-test.js',
+			'app/modules/admin/adminModule.js',
+			'app/modules/admin/adminCtrl.js',
+			'app/modules/admin/adminRoute.js',
+			'app/modules/admin/adminService.js',
+			'app/modules/admin/admin-test.js',
 		],
 
 		// Test results reporter to use
