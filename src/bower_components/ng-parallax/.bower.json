@@ -25,7 +25,6 @@
 		"commit": "8256c7de6742723cdb04cd28d5fcc16373379c37"
 	},
 	"_source": "git://github.com/oblador/angular-parallax.git",
-	"_target": "^0.1.8",
-	"_originalSource": "ng-parallax",
-	"_direct": true
+	"_target": ">=0.1.8",
+	"_originalSource": "ng-parallax"
 }

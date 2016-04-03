@@ -25,7 +25,7 @@
 
 			function register(credentials) {
 				console.log(credentials);
-				return $http.post('http://37.187.52.160:9000/register', credentials).then(function (response) {
+				return $http.post('http://37.187.52.160:9000/register', credentials, {withCredentials: true}).then(function (response) {
 					console.log(response);
 					return response;
 				});

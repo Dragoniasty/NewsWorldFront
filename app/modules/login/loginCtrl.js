@@ -56,9 +56,9 @@
 					clickOutsideToClose: true
 				})
 				.then(function () {
-
+					vm.credentials = {};
 				}, function () {
-
+					vm.credentials = {};
 				});
 		};
 		}

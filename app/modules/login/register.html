@@ -14,15 +14,15 @@
 
 			<md-input-container>
 				<label>Hasło</label>
-				<input name="password" ng-model="vm.parent.credentials.password" required>
+				<input type="password" name="password" ng-model="vm.parent.credentials.password" required>
 			</md-input-container>
 
 			<md-input-container>
 				<label>Potwierdź hasło</label>
-				<input name="confirmPassword" ng-model="vm.parent.credentials.confirmPassword" required>
+				<input type="password" name="confirmPassword" ng-model="vm.parent.credentials.confirmPassword" required>
 			</md-input-container>
 
-			<md-checkbox class="md-primary" required>Zgadzam się na wszystko</md-checkbox>
+			<md-checkbox ng-required class="md-primary" required>Zgadzam się na wszystko</md-checkbox>
 		</div>
 		<md-button type="submit" class="md-raised md-primary" md-prevent-menu-close="md-prevent-menu-close"
 				   style="float: right;">
