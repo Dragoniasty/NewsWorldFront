@@ -15,9 +15,9 @@
 		.controller('ContentCtrl', Content)
 		.directive('heightExtractor', HeightExtractor);
 
-	Content.$inject = ['ContentService', '$mdSidenav', 'parallaxHelper'];
+	Content.$inject = ['getContentService', '$mdSidenav', 'parallaxHelper'];
 
-	function Content(ContentService, $mdSidenav, parallaxHelper) {
+	function Content(getContentService, $mdSidenav, parallaxHelper) {
 		var vm = this;
 
 		vm.background = parallaxHelper.createAnimator(-0.4, 5000, -screen.availHeight, screen.availHeight);
@@ -29,11 +29,16 @@
 				opacity: opacity
 			}
 		};
+		/*
+		 ContentService.getFeaturedArticles().then(function(data) {
+		 vm.featured = data;
+		 }, function () {
+		 vm.error = 'unable to fetch articles';
+		 });*/
 
-
-		ContentService.getCategories().then(function (data) {
+		getContentService.getCategories().then(function (data) {
 			vm.categories = data;
-
+			/*
 			console.log(data);
 			vm.categories.forEach(function (category) {
 				ContentService.getArticles(category.name).then(function (data) {
@@ -42,7 +47,7 @@
 				}, function () {
 					vm.error = 'unable to fetch articles';
 				});
-			});
+			 });*/
 
 		}, function () {
 			vm.error = 'unable to fetch categories';

@@ -1,0 +1,52 @@
+{
+	"result": "000",
+	"message": "OK",
+	"value": {
+		"content": [
+			{
+				"id": 1,
+				"title": "Bill Gates to launch clean energy project on sidelines of Paris climate talks",
+				"text": "Microsoft co-founder Bill Gates will launch a multi-billion-dollar clean energy research and development initiative on Monday, the opening day of the United Nations climate change summit in Paris, it was reported on Friday.",
+				"imageUrl": "https://i.guim.co.uk/img/media/a63052cc49ffc7ba0ea27748b52e6eed777990f6/0_128_2456_1473/master/2456.jpg?w=1920&q=55&auto=format&usm=12&fit=max&s=10ba61de6db2db3460534e3c27cf8545",
+				"link": "http://www.theguardian.com/environment/2015/nov/27/bill-gates-clean-energy-initiative-paris-climate-talks",
+				"visible": true,
+				"tags": [],
+				"category": null,
+				"addedDate": 1457224396561,
+				"source": null
+			},
+			{
+				"id": 2,
+				"title": "Polsat Boxing Night: Eric Molina brutalnie znokautował Tomasza Adamka. Koniec kariery \"Górala\"",
+				"text": "To koniec kariery Tomasza Adamka. W walce wieczoru gali Polsat Boxing Night: \"Final Call\" Polak został znokautowany przez Erica Molinę, który sięgnął tym samym po pas IBF Inter-Continental. \"Góral\" przez większość walki wyglądał dobrze, wydawał się prowadzić na punkty. Tuż przed końcem dziesiątej rundy przyjął jednak piekielnie mocny cios, po którym nie zdołał się już podnieść.",
+				"imageUrl": "http://ocdn.eu/images/pulscms/NjE7MDQsMCwxNWYsMTNlZSxiMzU7MDYsMzE0LDFiYzswYywxNDBiMWNmZTdmMGFjNTJlZGMwMTBkNzA5NzhlODRiZSwxLDEsNiww/ad499852e552938b5ae4a85b0cc89cbf.jpg",
+				"link": "http://eurosport.onet.pl/boks/polsat-boxing-night-eric-molina-brutalnie-znokautowal-tomasza-adamka-koniec-kariery/5mez4n",
+				"visible": true,
+				"tags": [],
+				"category": null,
+				"addedDate": 1457224396611,
+				"source": null
+			},
+			{
+				"id": 3,
+				"title": "Russia accuses Turkey of smuggling weapons to ISIS",
+				"text": "Russia is accusing three Turkish foundations of supplying weapons and military equipment to Islamic State extremists in Syria and says $1.9 million worth of explosives and industrial chemicals were smuggled across Turkey's border to extremist groups.",
+				"imageUrl": "http://www.ctvnews.ca/polopoly_fs/1.2842390.1459555482!/httpImage/image.jpg_gen/derivatives/landscape_620/image.jpg",
+				"link": "http://www.ctvnews.ca/world/russia-accuses-turkey-of-smuggling-weapons-to-isis-1.2842385",
+				"visible": true,
+				"tags": [],
+				"category": null,
+				"addedDate": 1457224396621,
+				"source": null
+			}
+		],
+		"last": false,
+		"totalElements": 118,
+		"totalPages": 6,
+		"sort": null,
+		"first": true,
+		"numberOfElements": 20,
+		"size": 20,
+		"number": 0
+	}
+}

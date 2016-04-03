@@ -15,6 +15,12 @@ angular.module('news-world')
 			.state('admin', {
 				url:'/admin',
 				templateUrl: '/app/modules/Content/Admin.html'
+			})
+			.state('cover', {
+				url: '/cover',
+				templateUrl: '/app/modules/Content/Cover.html',
+				controller: 'ContentCtrl',
+				controllerAs: 'Content'
 			});
 
 	}]);

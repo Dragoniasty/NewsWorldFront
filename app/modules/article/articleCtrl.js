@@ -13,10 +13,26 @@
 		.module('article')
 		.controller('ArticleCtrl', Article);
 
-	Article.$inject = [];
+	Article.$inject = ['$mdDialog'];
 
-	function Article() {
+	function Article($mdDialog) {
 		var vm = this;
+		vm.showFullArticle = function (ev) {
+			$mdDialog.show({
+					locals: {parent: vm},
+					controller: angular.noop,
+					controllerAs: 'vm',
+					bindToController: true,
+					templateUrl: '/app/modules/article/article-full.html',
+					targetEvent: ev,
+					clickOutsideToClose: true
+				})
+				.then(function () {
+
+				}, function () {
+
+				});
+		};
 	}
 
 })();

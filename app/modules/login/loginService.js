@@ -18,7 +18,25 @@
 		Login.$inject = ['$http'];
 
 		function Login ($http) {
+			return {
+				register: register,
+				login: login
+			};
 
+			function register(credentials) {
+				console.log(credentials);
+				return $http.post('http://37.187.52.160:9000/register', credentials).then(function (response) {
+					console.log(response);
+					return response;
+				});
+			}
+
+			function login(credentials) {
+				return $http.post('http://37.187.52.160:9000/oauth/token', credentials).then(function (response) {
+					console.log(response);
+					return response;
+				});
+			}
 		}
 
 })();

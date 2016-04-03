@@ -1,0 +1,32 @@
+<div style="padding: 10px;">
+	<div class="login-headline">Rejestracja</div>
+	<form ng-submit="vm.parent.register()">
+		<div class="inputs" layout="column">
+			<md-input-container>
+				<label>Nazwa użyszkodnika</label>
+				<input name="username" ng-model="vm.parent.credentials.username" required>
+			</md-input-container>
+
+			<md-input-container>
+				<label> Adres e-mail</label>
+				<input name="mail" ng-model="vm.parent.credentials.mail" required>
+			</md-input-container>
+
+			<md-input-container>
+				<label>Hasło</label>
+				<input name="password" ng-model="vm.parent.credentials.password" required>
+			</md-input-container>
+
+			<md-input-container>
+				<label>Potwierdź hasło</label>
+				<input name="confirmPassword" ng-model="vm.parent.credentials.confirmPassword" required>
+			</md-input-container>
+
+			<md-checkbox class="md-primary" required>Zgadzam się na wszystko</md-checkbox>
+		</div>
+		<md-button type="submit" class="md-raised md-primary" md-prevent-menu-close="md-prevent-menu-close"
+				   style="float: right;">
+			zarejestruj
+		</md-button>
+	</form>
+</div>

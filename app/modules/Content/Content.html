@@ -3,6 +3,7 @@
 	<md-sidenav md-component-id="left" class="md-sidenav-left" style="position: fixed" md-disable-backdrop
 				md-is-locked-open="$mdMedia('min-width: 333px')">
 		<div layout="column" style="align-items: flex-start; height: 100%">
+			<login style="padding-top: 50px;"></login>
 			<md-list style="align-self: flex-start; width: 100%; padding-top: 100px;">
 				<md-list-item ng-repeat="Category in Content.categories">
 					<a href="#{{Category.name}}" class="category-selector" du-smooth-scroll du-scrollspy>{{Category.name}}</a>
@@ -14,7 +15,7 @@
 
 		<div height-extractor ng-repeat="Category in Content.categories" style="height: 100%; position: relative">
 			<section id="{{Category.name}}">
-				<img class="background-image" ng-src="http://lorempixel.com/1000/600/" du-parallax
+				<img class="background-image" ng-src="{{Category.articles[0].imageUrl}}" du-parallax
 					 y="Content.background"
 					 custom="Content.fadeIn" alt="" style="height: {{height}}">
 				<md-toolbar style="background: transparent; padding-left: 200px" layout="row">

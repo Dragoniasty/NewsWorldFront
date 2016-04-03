@@ -20,7 +20,8 @@
 	function ContentService($http){
 		return {
 			getCategories: getCategories,
-			getArticles: getArticles
+			getArticles: getArticles,
+			getFeaturedArticles: getFeaturedArticles
 		};
 
 		function getCategories(){
@@ -34,6 +35,12 @@
 			link = link.concat(category);
 			link = link.concat(".json");
 			return $http.get(link).then(function(response) {
+				return response.data.value.content;
+			});
+		}
+
+		function getFeaturedArticles() {
+			return $http.get('/app/assets/fake_data/featured.json').then(function (response) {
 				return response.data.value.content;
 			});
 		}

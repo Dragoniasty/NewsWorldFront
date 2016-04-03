@@ -1,6 +1,5 @@
-<div class="tile md-whiteframe-5dp" ng-click="" md-ink-ripple>
-	<img class="miniature"
-		 ng-src="http://ocdn.eu/images/pulscms/Yjc7MDQsMSw0OCw5YjgsNTc3OzA2LDMxNCwxYmM7MGMsMTQwYjFjZmU3ZjBhYzUyZWRjMDEwZDcwOTc4ZTg0YmUsMSwxLDYsMA__/bd9164c92014b1f1618d664663fa9c00.jpg">
+<div class="tile md-whiteframe-5dp" ng-click="vm.showFullArticle()" md-ink-ripple>
+	<img class="miniature" ng-src="{{vm.article.imageUrl}}">
 	<div class="gradient"></div>
 	<div class="title">{{vm.article.title}}</div>
 </div>
@@ -15,6 +14,7 @@
 		position: absolute;
 		z-index: 3;
 		background-color: black;
+		font-family: 'Roboto Condensed', sans-serif;
 	}
 
 	.miniature {
@@ -27,7 +27,7 @@
 		height: 100%;
 		min-width: 100%;
 		opacity: 1;
-		z-index: -1;
+		z-index: 1;
 		webkit-transition: width 0.7s, height 0.7s, opacity 0.7s;
 		transition: width 0.7s, height 0.7s, opacity 0.7s;
 	}
@@ -46,16 +46,17 @@
 		background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 26%, rgba(0, 0, 0, 0.65) 100%);
 		background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 26%, rgba(0, 0, 0, 0.65) 100%);
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
-
+		z-index: 2;
 	}
 
 	.title {
 		pointer-events: none;
 		position: absolute;
-		bottom: 0px;
-		left: 0px;
+		bottom: 0;
+		left: 0;
 		font-size: 25px;
 		color: white;
 		padding: 10px;
+		z-index: 3;
 	}
 </style>

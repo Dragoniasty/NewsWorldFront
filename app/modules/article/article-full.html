@@ -1,10 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Title</title>
-</head>
-<body>
+<md-dialog aria-label="Article" ng-cloak>
+	<md-dialog-content>
+		<div class="md-dialog-content">
+			<div class="full-image">
+				<img ng-src="{{vm.parent.article.imageUrl}}" style="height: 400px; width: auto;">
+			</div>
+			<div class="full-title">
+				{{vm.parent.article.title}}
+			</div>
+			<md-divider></md-divider>
+			<div class="full-text">
+				{{vm.parent.article.text}}
+			</div>
+			<div class="full-actions">
 
-</body>
-</html>
+			</div>
+		</div>
+	</md-dialog-content>
+</md-dialog>
+
+<style>
+	.full-title {
+		font-size: 26px;
+	}
+</style>
