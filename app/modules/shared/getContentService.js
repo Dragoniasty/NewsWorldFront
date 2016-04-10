@@ -10,13 +10,14 @@
 	function getContent($http) {
 
 		return {
-			getCategories: getCategories,
+			getAvailableCategories: getAvailableCategories,
 			getArticles: getArticles,
 			getAllArticles: getAllArticles,
-			getTags: getTags
+			getTags: getTags,
+			getArticlesFromCategory: getArticlesFromCategory
 		};
 
-		function getCategories() {
+		function getAvailableCategories() {
 			return $http.get('http://37.187.52.160:9000/api/category').then(function (response) {
 				return response.data.value;
 			});
@@ -37,6 +38,12 @@
 
 		function getTags() {
 			return $http.get('http://37.187.52.160:9000/api/tag').then(function (response) {
+				return response.data.value;
+			});
+		}
+
+		function getArticlesFromCategory(categoryId) {
+			return $http.get('http://37.187.52.160:9000/api/category/articles/'.concat(categoryId)).then(function (response) {
 				return response.data.value;
 			});
 		}

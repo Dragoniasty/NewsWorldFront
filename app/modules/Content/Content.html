@@ -1,14 +1,90 @@
 <div layout="row" flex style="background-color: black; width: 100%">
+
 	<div class="overlay"></div>
+
 	<md-sidenav md-component-id="left" class="md-sidenav-left" style="position: fixed" md-disable-backdrop
 				md-is-locked-open="$mdMedia('min-width: 333px')">
 		<div layout="column" style="align-items: flex-start; height: 100%">
 			<login style="padding-top: 50px;"></login>
-			<md-list style="align-self: flex-start; width: 100%; padding-top: 100px;">
-				<md-list-item ng-repeat="Category in Content.categories">
-					<a href="#{{Category.name}}" class="category-selector" du-smooth-scroll du-scrollspy>{{Category.name}}</a>
-				</md-list-item>
-			</md-list>
+
+			<md-list-item ng-click="Content.toggleEditMode()" aria-label="edycja">
+				<div ng-if="Content.editMode" layout="row">
+					<ng-md-icon icon="done"
+								style="fill: rgba(255, 255, 255, 0.87);
+									width: 24px;
+									height: auto;
+									padding-right: 5px"
+								size="100%">
+					</ng-md-icon>
+					<div class="category-selector">Gotowe</div>
+				</div>
+				<div ng-if="!Content.editMode" layout="row">
+					<ng-md-icon icon="settings"
+								style="fill: rgba(255, 255, 255, 0.87);
+									width: 24px;
+									height: auto;
+									padding-right: 5px"
+								size="100%">
+					</ng-md-icon>
+					<div class="category-selector">Edycja</div>
+				</div>
+			</md-list-item>
+
+			<div ng-if="!Content.editMode">
+				<md-list style="align-self: flex-start; width: 100%; padding-top: 100px;">
+					<md-list-item ng-repeat="Category in Content.userCategories">
+						<a href="#{{Category.name}}" class="category-selector"
+						   du-smooth-scroll du-scrollspy>{{Category.name}}</a>
+					</md-list-item>
+				</md-list>
+			</div>
+
+			<div ng-if="Content.editMode">
+				<md-list style="align-self: flex-start; width: 100%; padding-top: 100px;"
+						 data-as-sortable="Content.dragControlListeners"
+						 data-ng-model="Content.userCategories"
+						 is-disabled="!Content.editMode">
+
+					<md-list-item ng-repeat="Category in Content.userCategories"
+								  data-as-sortable-item>
+						<div layout="row">
+							<md-button class="md-icon-button"
+									   ng-click="Content.removeUserCategory($index)"
+									   aria-label="usuń kategorię">
+								<ng-md-icon icon="clear" class="icon"></ng-md-icon>
+							</md-button>
+
+							<div class="category-selector" data-as-sortable-item-handle>{{Category.name}}</div>
+						</div>
+					</md-list-item>
+
+
+					<md-list-item style="padding:0; width: 100%">
+						<md-menu>
+							<md-list-item ng-click="Content.openMenu($mdOpenMenu, $event)" style="; width: 100%">
+								<div layout="row" style="width: 100%">
+									<ng-md-icon icon="add" class="icon"></ng-md-icon>
+									<div class="category-selector">Dodaj</div>
+								</div>
+							</md-list-item>
+							<md-menu-content style="background: transparent;">
+								<md-autocomplete md-selected-item="Content.selectedItem"
+												 md-search-text="Content.searchText"
+												 md-items="Category in Content.searchCategories(Content.searchText)"
+												 md-item-text="Category.name"
+												 md-min-length="0"
+												 md-selected-item-change="Content.addUserCategory(Category)">
+									<md-item-template>
+										<span md-highlight-text="Content.searchText" md-highlight-flags="^i"
+											  style="width: 100%">{{Category.name}}</span>
+									</md-item-template>
+								</md-autocomplete>
+
+							</md-menu-content>
+						</md-menu>
+					</md-list-item>
+				</md-list>
+			</div>
 		</div>
 	</md-sidenav>
 	<div layout="column" ng-cloak style="overflow: hidden; width: 100%; position: relative">
@@ -84,5 +160,15 @@
 		background-color: black;
 		opacity: 0.73;
 		z-index: 1;
+	}
+
+	.md-button.md-icon-button {
+		margin: 0;
+	}
+
+	.icon {
+		fill: rgba(255, 255, 255, 0.87);
+		width: 24px;
+		height: auto;
 	}
 </style>

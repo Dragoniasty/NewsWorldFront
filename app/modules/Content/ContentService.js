@@ -15,13 +15,15 @@
 		.factory('ContentService', ContentService);
 
 
-	ContentService.$inject = ['$http'];
+	ContentService.$inject = ['$http', '$cookies'];
 
-	function ContentService($http){
+	function ContentService($http, $cookies) {
 		return {
 			getCategories: getCategories,
 			getArticles: getArticles,
-			getFeaturedArticles: getFeaturedArticles
+			getFeaturedArticles: getFeaturedArticles,
+			getUserCategoriesFromCookie: getUserCategoriesFromCookie,
+			putUserCategoriesToCookie: putUserCategoriesToCookie
 		};
 
 		function getCategories(){
@@ -43,6 +45,19 @@
 			return $http.get('/app/assets/fake_data/featured.json').then(function (response) {
 				return response.data.value.content;
 			});
+		}
+
+		function getUserCategoriesFromCookie() {
+			var userCategories = $cookies.getObject("userCategories");
+			return userCategories ? userCategories : [];
+		}
+
+		function putUserCategoriesToCookie(categories) {
+			var kopytko = [];
+			categories.forEach(function (category) {
+				kopytko.push({name: category.name, id: category.id, imageUrl: category.imageUrl});
+			});
+			$cookies.putObject('userCategories', kopytko);
 		}
 	}
 })();

@@ -24,7 +24,8 @@
 		'article',
 		'admin',
 		'duParallax',
-		'duScroll'
+		'duScroll',
+		'as.sortable'
 	]);
 
 })();

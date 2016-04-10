@@ -15,10 +15,47 @@
 		.controller('ContentCtrl', Content)
 		.directive('heightExtractor', HeightExtractor);
 
-	Content.$inject = ['getContentService', '$mdSidenav', 'parallaxHelper'];
+	Content.$inject = ['getContentService', 'ContentService', '$mdSidenav', 'parallaxHelper', '$mdMenu'];
 
-	function Content(getContentService, $mdSidenav, parallaxHelper) {
+	function Content(getContentService, ContentService, $mdSidenav, parallaxHelper, $mdMenu) {
 		var vm = this;
+		vm.categories = [];
+		vm.userCategories = [];
+		vm.editMode = false;
+		vm.availableCategories = [];
+		vm.userCategories = ContentService.getUserCategoriesFromCookie();
+
+		vm.categories = vm.userCategories;
+		vm.userCategories.forEach(function (category) {
+			getContentService.getArticlesFromCategory(category.id).then(function (data) {
+				category.articles = data;
+			}, function () {
+				vm.error = 'unable to fetch articles'
+			});
+
+		});
+
+		vm.getAvailableCategories = function () {
+			getContentService.getAvailableCategories().then(function (data) {
+				vm.availableCategories = data;
+				vm.userCategories.forEach(function (category) {
+
+					for (var i = 0; i < vm.availableCategories.length; i++) {
+						if (vm.availableCategories[i].id === category.id) {
+							vm.availableCategories.splice(i, 1);
+						}
+					}
+				});
+
+				console.log(vm.availableCategories);
+			}, function () {
+				vm.error = 'unable to fetch categories';
+			});
+		};
+
+		vm.openMenu = function ($mdOpenMenu, ev) {
+			$mdOpenMenu(ev);
+		};
 
 		vm.background = parallaxHelper.createAnimator(-0.4, 5000, -screen.availHeight, screen.availHeight);
 
@@ -29,40 +66,70 @@
 				opacity: opacity
 			}
 		};
-		/*
-		 ContentService.getFeaturedArticles().then(function(data) {
-		 vm.featured = data;
-		 }, function () {
-		 vm.error = 'unable to fetch articles';
-		 });*/
 
-		getContentService.getCategories().then(function (data) {
-			vm.categories = data;
-			/*
-			console.log(data);
-			vm.categories.forEach(function (category) {
-				ContentService.getArticles(category.name).then(function (data) {
+		vm.toggleEditMode = function () {
+			vm.editMode = !vm.editMode;
+			vm.getAvailableCategories();
+		};
 
-					category.articles = data;
-				}, function () {
-					vm.error = 'unable to fetch articles';
-				});
-			 });*/
-
-		}, function () {
-			vm.error = 'unable to fetch categories';
-		});
 
 		vm.openLeftMenu = function () {
 			$mdSidenav('left').toggle();
 		};
+
+		vm.dragControlListeners = {
+			accept: function (sourceItemHandleScope, destSortableScope) {
+				return true
+			},
+			itemMoved: function (event) {
+			},
+			orderChanged: function (event) {
+				ContentService.putUserCategoriesToCookie(vm.userCategories);
+			}
+		};
+
+		vm.searchCategories = function (query) {
+			var results = query ? vm.availableCategories.filter(vm.createFilterFor(query)) : vm.availableCategories;
+			return results;
+		};
+
+		vm.createFilterFor = function (query) {
+			var lowercaseQuery = angular.lowercase(query);
+			return function filterFn(category) {
+				return (category.name.indexOf(query) === 0);
+			};
+		};
+
+		vm.addUserCategory = function (category) {
+			if (vm.searchText != "") {
+				vm.searchText = "";
+				vm.userCategories.push(category);
+				
+				getContentService.getArticlesFromCategory(category.id).then(function (data) {
+					category.articles = data;
+				}, function () {
+					vm.error = 'unable to fetch articles'
+				});
+				var index = vm.availableCategories.indexOf(category);
+				vm.availableCategories.splice(index, 1);
+				ContentService.putUserCategoriesToCookie(vm.userCategories);
+				$mdMenu.hide()
+			}
+		};
+
+		vm.removeUserCategory = function (categoryIdx) {
+			vm.availableCategories.push(vm.userCategories[categoryIdx]);
+			vm.userCategories.splice(categoryIdx, 1);
+			ContentService.putUserCategoriesToCookie(vm.userCategories);
+		};
+
 	}
 
 	function HeightExtractor($timeout) {
 		return {
 			restrict: 'A',
 			link: function (scope, el) {
-				$timeout(getHeight, 200, true);
+				$timeout(getHeight, 500, true);
 
 				function getHeight() {
 					scope.height = el[0].offsetHeight + screen.availHeight;
@@ -72,4 +139,6 @@
 			}
 		}
 	}
+
+
 })();

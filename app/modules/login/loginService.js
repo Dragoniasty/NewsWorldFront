@@ -32,7 +32,11 @@
 			}
 
 			function login(credentials) {
-				return $http.post('http://37.187.52.160:9000/oauth/token', credentials).then(function (response) {
+				credentials.grant_type = "password";
+				credentials.scope = "read";
+				credentials.client_secret = "123456";
+				credentials.client_id = "clientapp";
+				return $http.post('http://37.187.52.160:9000/oauth/token', credentials, {withCredentials: true}).then(function (response) {
 					console.log(response);
 					return response;
 				});
