@@ -13,11 +13,16 @@
 		.module('article')
 		.controller('ArticleCtrl', Article);
 
-	Article.$inject = ['$mdDialog'];
+	Article.$inject = ['$mdDialog', 'ArticleService'];
 
-	function Article($mdDialog) {
+	function Article($mdDialog, ArticleService) {
 		var vm = this;
-		vm.showFullArticle = function (ev) {
+
+		vm.like = ArticleService.like;
+		vm.dislike = ArticleService.dislike;
+		vm.showFullArticle = showFullArticle;
+
+		function showFullArticle(ev) {
 			$mdDialog.show({
 					locals: {parent: vm},
 					controller: angular.noop,
@@ -32,7 +37,7 @@
 				}, function () {
 
 				});
-		};
+		}
 	}
 
 })();

@@ -3,13 +3,18 @@
 	<form ng-submit="vm.parent.register()">
 		<div class="inputs" layout="column">
 			<md-input-container>
-				<label>Nazwa użyszkodnika</label>
-				<input name="username" ng-model="vm.parent.credentials.username" required>
+				<label>Imię</label>
+				<input name="firstname" ng-model="vm.parent.credentials.firstName" required>
 			</md-input-container>
 
 			<md-input-container>
-				<label> Adres e-mail</label>
-				<input name="mail" ng-model="vm.parent.credentials.mail" required>
+				<label>Nazwisko</label>
+				<input name="lastname" ng-model="vm.parent.credentials.lastName" required>
+			</md-input-container>
+
+			<md-input-container>
+				<label>Adres e-mail</label>
+				<input name="email" ng-model="vm.parent.credentials.email" required>
 			</md-input-container>
 
 			<md-input-container>
@@ -17,12 +22,7 @@
 				<input type="password" name="password" ng-model="vm.parent.credentials.password" required>
 			</md-input-container>
 
-			<md-input-container>
-				<label>Potwierdź hasło</label>
-				<input type="password" name="confirmPassword" ng-model="vm.parent.credentials.confirmPassword" required>
-			</md-input-container>
-
-			<md-checkbox ng-required class="md-primary" required>Zgadzam się na wszystko</md-checkbox>
+			<md-checkbox ng-required class="md-primary">Zgadzam się na wszystko</md-checkbox>
 		</div>
 		<md-button type="submit" class="md-raised md-primary" md-prevent-menu-close="md-prevent-menu-close"
 				   style="float: right;">

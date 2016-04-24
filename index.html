@@ -34,11 +34,11 @@
 	</style>
 </head>
 <body>
-<div layout="row" ng-controller="ContentCtrl as Content">
+
 
 
 <div ui-view layout-fill></div>
-</div>
+
 <!--Beginning-->
 <!--End-->
 
@@ -65,6 +65,7 @@
 <script src="/src/bower_components/ng-sortable/dist/ng-sortable.js"></script>
 <script src="/app/app.js"></script>
 <script src="/app/app.config.js"></script>
+<script src="/app/app.route.js"></script>
 <script src="/app/modules/Content/ContentModule.js"></script>
 <script src="/app/modules/admin/adminModule.js"></script>
 <script src="/app/modules/article/articleModule.js"></script>
@@ -83,6 +84,7 @@
 <script src="/app/modules/login/loginService.js"></script>
 <script src="/app/modules/shared/getContentService.js"></script>
 <script src="/app/modules/shared/postContentService.js"></script>
+<script src="/app/modules/shared/tokenService.js"></script>
 <script src="/app/modules/article/articleDirective.js"></script>
 <script src="/app/modules/login/loginDirective.js"></script>
 <!-- endinjector -->

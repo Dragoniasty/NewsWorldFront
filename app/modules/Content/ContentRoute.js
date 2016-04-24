@@ -4,23 +4,13 @@
 
 angular.module('news-world')
 	.config(['$stateProvider', function ($stateProvider) {
-		$stateProvider
 
-			.state('content', {
+		$stateProvider
+			.state('home.content', {
 				url: '/content',
-				templateUrl: '/app/modules/Content/Content.html',
+				templateUrl: 'app/modules/Content/Content.html',
 				controller: 'ContentCtrl',
-				controllerAs: 'Content'
-			})
-			.state('admin', {
-				url:'/admin',
-				templateUrl: '/app/modules/Content/Admin.html'
-			})
-			.state('cover', {
-				url: '/cover',
-				templateUrl: '/app/modules/Content/Cover.html',
-				controller: 'ContentCtrl',
-				controllerAs: 'Content'
+				controllerAs: 'vm'
 			});
 
 	}]);

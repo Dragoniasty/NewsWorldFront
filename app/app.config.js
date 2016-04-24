@@ -15,9 +15,9 @@
 		.config(configure)
 		.run(runBlock);
 
-	configure.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider'];
+	configure.$inject = ['$urlRouterProvider', '$locationProvider', '$httpProvider', '$cookiesProvider'];
 
-	function configure($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
+	function configure($urlRouterProvider, $locationProvider, $httpProvider, $cookiesProvider) {
 
 		$locationProvider.hashPrefix('!');
 
@@ -27,6 +27,9 @@
 		$urlRouterProvider
 			.otherwise('/content');
 
+		var date = Date.now();
+		date = date + 31536000;
+		$cookiesProvider.defaults.expires = date;
 	}
 
 	runBlock.$inject = ['$rootScope'];

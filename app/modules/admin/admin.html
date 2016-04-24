@@ -1,7 +1,98 @@
-<div class="md-padding" flex layout-sm="column">
-	<md-card>
-		<md-card-content>
-			<h2 class="md-title">Content from: admin page</h2>
-		</md-card-content>
-	</md-card>
-</div>
+<md-content>
+	<md-tabs md-dynamic-height>
+
+		<md-tab label="POST article">
+			<md-content class="md-padding">
+				<form ng-submit="vm.postArticle()">
+					<md-input-container class="md-block">
+						<label>Tytuł</label>
+						<input required ng-model="vm.ArticleToPost.title">
+					</md-input-container>
+
+					<md-input-container class="md-block">
+						<label>Text</label>
+						<input ng-model="vm.ArticleToPost.text">
+					</md-input-container>
+
+					<md-input-container class="md-block">
+						<label>ImgURL</label>
+						<input ng-model="vm.ArticleToPost.imgUrl">
+					</md-input-container>
+
+					<md-input-container class="md-block">
+						<label>Link</label>
+						<input required ng-model="vm.ArticleToPost.link">
+					</md-input-container>
+
+					<md-input-container style="margin-right: 10px;">
+						<label>Kategoria</label>
+						<md-select ng-model="vm.ArticleToPost.categoryId"
+						>
+							<md-option ng-repeat="category in vm.categories" value="{{category.id}}">
+								{{category.name}}
+							</md-option>
+						</md-select>
+					</md-input-container>
+					<md-chips ng-model="vm.tmpTags"
+							  md-transform-chip="vm.transformChip($chip)"
+					>
+						<md-autocomplete
+							md-selected-item="vm.selectedTag"
+							md-search-text="vm.searchText"
+							md-items="tag in vm.searchTags(vm.searchText)"
+							md-item-text="tag.name"
+							placeholder="Zapodaj tagi"
+						>
+							<span md-highlight-text="vm.searchText">{{tag.name}}</span>
+						</md-autocomplete>
+						<md-chip-template>
+        						<span>
+									<strong>{{$chip.name}}</strong>
+								</span>
+						</md-chip-template>
+					</md-chips>
+					<md-button type="submit">Wyślij</md-button>
+				</form>
+			</md-content>
+		</md-tab>
+
+		<md-tab label="POST category" style="height: 100%">
+			<md-list-item ng-click="vm.setCategoryToPost({})" style="background: #AED581">
+				<p>Dodaj nową kategorię</p>
+			</md-list-item>
+			<md-list>
+				<md-list-item ng-repeat="category in vm.categories"
+							  ng-click="vm.setCategoryToPost(category)">
+					<p>{{category.name}}</p>
+				</md-list-item>
+
+			</md-list>
+			<md-content class="md-padding">
+				<form ng-submit="vm.postCategory(vm.CategoryToPost)">
+					<md-input-container class="md-block">
+						<label>Nazwa</label>
+						<input required ng-model="vm.CategoryToPost.name">
+					</md-input-container>
+					<md-input-container class="md-block">
+						<label>ImageURL</label>
+						<input ng-model="vm.CategoryToPost.imageUrl">
+					</md-input-container>
+					<md-button type="submit">Wyślij</md-button>
+				</form>
+			</md-content>
+		</md-tab>
+
+		<md-tab label="POST tag">
+			<md-content class="md-padding">
+				<form ng-submit="vm.postTag(vm.TagToPost)">
+					<md-input-container class="md-block">
+						<label>Nazwa</label>
+						<input required ng-model="vm.TagToPost.name">
+					</md-input-container>
+					<md-button type="submit">Wyślij</md-button>
+				</form>
+			</md-content>
+		</md-tab>
+
+	</md-tabs>
+</md-content>

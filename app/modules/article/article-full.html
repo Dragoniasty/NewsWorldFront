@@ -9,6 +9,8 @@
 					{{vm.parent.article.title}}
 				</a>
 				<md-divider></md-divider>
+				<md-button ng-click="vm.parent.like(vm.parent.article.id)">like</md-button>
+				<md-button ng-click="vm.parent.dislike(vm.parent.article.id)">dislike</md-button>
 				<div class="full-text">
 					{{vm.parent.article.text}}
 				</div>

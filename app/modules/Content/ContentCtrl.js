@@ -26,7 +26,9 @@
 		vm.userCategories = ContentService.getUserCategoriesFromCookie();
 
 		vm.categories = vm.userCategories;
+
 		vm.userCategories.forEach(function (category) {
+			category.showFilters = false;
 			getContentService.getArticlesFromCategory(category.id).then(function (data) {
 				category.articles = data;
 			}, function () {
@@ -77,6 +79,10 @@
 			$mdSidenav('left').toggle();
 		};
 
+		vm.toggleFilters = function (category) {
+			category.showFilters = !category.showFilters;
+		};
+
 		vm.dragControlListeners = {
 			accept: function (sourceItemHandleScope, destSortableScope) {
 				return true
@@ -104,7 +110,7 @@
 			if (vm.searchText != "") {
 				vm.searchText = "";
 				vm.userCategories.push(category);
-				
+
 				getContentService.getArticlesFromCategory(category.id).then(function (data) {
 					category.articles = data;
 				}, function () {

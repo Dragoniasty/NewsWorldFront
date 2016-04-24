@@ -42,6 +42,7 @@ module.exports = function (grunt) {
 					// Angular Project Dependencies,
 					'app/app.js',
 					'app/app.config.js',
+					'app/app.route.js',
 					'app/modules/**/*Module.js',
 					'app/modules/**/*Route.js',
 					'app/modules/**/*Ctrl.js',

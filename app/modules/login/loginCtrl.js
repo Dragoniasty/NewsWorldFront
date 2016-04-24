@@ -1,51 +1,56 @@
-(function() {
+(function () {
 	'use strict';
 
 	/**
-	* @ngdoc function
-	* @name app.controller:loginCtrl
-	* @description
-	* # loginCtrl
-	* Controller of the app
-	*/
+	 * @ngdoc function
+	 * @name app.controller:loginCtrl
+	 * @description
+	 * # loginCtrl
+	 * Controller of the app
+	 */
 
-  	angular
+	angular
 		.module('login')
 		.controller('LoginCtrl', Login);
 
-	Login.$inject = ['LoginService', '$mdDialog'];
+	Login.$inject = ['LoginService', 'tokenService', '$mdDialog'];
 
-	function Login(LoginService, $mdDialog) {
-			var vm = this;
+	function Login(LoginService, tokenService, $mdDialog) {
+		var vm = this;
 		vm.loggedIn = false;
 		vm.credentials = {};
 
-		vm.openMenu = function ($mdOpenMenu, ev) {
-			$mdOpenMenu(ev);
-		};
+		vm.login = login;
+		vm.logout = logout;
+		vm.openMenu = openMenu;
+		vm.register = register;
+		vm.showRegisterDialog = showRegisterDialog;
 
-		vm.login = function () {
+		function openMenu($mdOpenMenu, ev) {
+			$mdOpenMenu(ev);
+		}
+
+		function login() {
 			LoginService.login(vm.credentials).then(function (response) {
-					console.log(response);
 					vm.loggedIn = true;
+				tokenService.saveTokenToCookie(response.value.token);
 				}, function () {
 				}
 			);
-		};
+		}
 
-		vm.logout = function () {
+		function logout() {
 
-		};
+		}
 
-		vm.register = function () {
+		function register() {
 			LoginService.register(vm.credentials).then(function (response) {
-				console.log(response);
 			}, function () {
 
 			});
-		};
+		}
 
-		vm.showRegisterDialog = function (ev) {
+		function showRegisterDialog(ev) {
 			$mdDialog.show({
 					locals: {parent: vm},
 					controller: angular.noop,
@@ -56,11 +61,11 @@
 					clickOutsideToClose: true
 				})
 				.then(function () {
-					vm.credentials = {};
+					vm.credent1ials = {};
 				}, function () {
 					vm.credentials = {};
 				});
-		};
 		}
+	}
 
 })();
