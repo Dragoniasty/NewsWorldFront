@@ -24,7 +24,7 @@
 			};
 
 			function register(credentials) {
-				return $http.get('http://37.187.52.160:9000/register?'.concat($httpParamSerializerJQLike(credentials))).then(function (response) {
+				return $http.get('http://37.187.52.160:9000/api/register?'.concat($httpParamSerializerJQLike(credentials))).then(function (response) {
 					console.log(response);
 					return response;
 				});
