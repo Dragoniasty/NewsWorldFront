@@ -15,7 +15,10 @@
 		};
 
 		function saveTokenToCookie(token) {
-			$cookies.putObject('token', token);
+			var date = new Date();
+			date.setDate(date.getDate() + 30);
+
+			$cookies.putObject('token', token, {expires: date});
 		}
 
 		function getTokenFromCookie() {

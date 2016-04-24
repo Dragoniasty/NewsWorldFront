@@ -33,7 +33,7 @@
 		function login() {
 			LoginService.login(vm.credentials).then(function (response) {
 					vm.loggedIn = true;
-				tokenService.saveTokenToCookie(response.value.token);
+				tokenService.saveTokenToCookie(response.data.value.token);
 				}, function () {
 				}
 			);

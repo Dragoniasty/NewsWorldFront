@@ -24,14 +24,14 @@
 			};
 
 			function register(credentials) {
-				return $http.post('http://37.187.52.160:9000/register', $httpParamSerializerJQLike(credentials)).then(function (response) {
+				return $http.get('http://37.187.52.160:9000/register?'.concat($httpParamSerializerJQLike(credentials))).then(function (response) {
 					console.log(response);
 					return response;
 				});
 			}
 
 			function login(credentials) {
-				return $http.post('http://37.187.52.160:9000/api/login', $httpParamSerializerJQLike(credentials)).then(function (response) {
+				return $http.get('http://37.187.52.160:9000/api/login?'.concat($httpParamSerializerJQLike(credentials))).then(function (response) {
 					console.log(response);
 					return response;
 				});

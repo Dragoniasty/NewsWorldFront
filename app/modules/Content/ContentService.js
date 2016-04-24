@@ -57,7 +57,12 @@
 			categories.forEach(function (category) {
 				kopytko.push({name: category.name, id: category.id, imageUrl: category.imageUrl});
 			});
-			$cookies.putObject('userCategories', kopytko);
+
+			var date = new Date();
+			date.setDate(date.getDate() + 365);
+
+
+			$cookies.putObject('userCategories', kopytko, {expires: date});
 		}
 	}
 })();
